@@ -25,7 +25,7 @@
     </div>
 
      <div  class="col-md-3">
-      <draggable element="span" v-model="list2" :options="dragOptions" :move="onMove"> 
+      <draggable element="span" v-model="list2" :options="dragOptions" :move="onMove"  @start="isDragging=true" @end="isDragging=false"> 
           <transition-group name="no" class="list-group" tag="ul">
             <li class="list-group-item" v-for="element in list2" :key="element.order"> 
               <i :class="element.fixed? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>
@@ -48,6 +48,8 @@
 
 <script>
 import draggable from 'vuedraggable'
+// import bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css'
 const message = [ 'vue.draggable', 'draggable', 'component', 'for', 'vue.js 2.0', 'based', 'on', 'Sortablejs' ]
 export default {
   name: 'hello',

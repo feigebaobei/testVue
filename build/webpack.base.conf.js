@@ -74,7 +74,17 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      // 在网上查到的解决方法是：注释了css-loader和style-loader就能正常加载css文件了。就是直接import css文件。不使用loader。
+      // {
+      //   test: /\.css$/,
+      //   // loaders: ['style-loader', 'css-loader']
+      //   loader: 'style-loader!css-loader'
+      // }
+      // {
+      //   test: /\.sass$/,
+      //   loader: 'style-loader!css-loader!sass-loader'
+      // }
     ]
   },
   node: {
