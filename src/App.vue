@@ -5,6 +5,7 @@
       <router-link to="/foo">Go to Foo</router-link>
       <router-link to="/bar">Go to Bar</router-link>
       <router-link to="/vuedraggable">vuedraggable</router-link>
+      <router-link to="/learnform">learnform</router-link>
     </nav>
     <div class="content">
       <router-view/>
