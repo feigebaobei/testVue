@@ -12,18 +12,21 @@
     </div>
     <!-- <vuedraggable></vuedraggable> -->
     <!-- <hello></hello> -->
-    <footer></footer>
+    <!-- <footer></footer> -->
+    <footervue></footervue>
   </div>
 </template>
 
 <script>
 // import vuedraggable from './components/vueDraggable.vue'
 // import hello from './components/hello.vue'
+import footer from './components/footer.vue'
 export default {
   name: 'app',
   components: {
     // vuedraggable: vuedraggable,
     // hello
+    footervue: footer
   },
   computed: {
     ms: function () {
