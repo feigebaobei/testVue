@@ -9,6 +9,7 @@ import learnform from '../components/learnvue/learnformvue.vue'
 import apivue from '../components/learnvue/apivue.vue'
 import learntransition from '../components/learnanimate/transition.vue'
 import learncomponent from '../components/learnvue/learncomponent.vue'
+import learnclass from '../components/learnvue/learnclass.vue'
 
 Vue.use(Router)
 
@@ -44,6 +45,9 @@ export default new Router({
     },
     {
       path: '/learncomponent', component: learncomponent
+    },
+    {
+      path: '/learnclass', component: learnclass
     }
   ]
 })

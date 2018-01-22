@@ -5,8 +5,12 @@
     <div class="transitionEx0"></div>
     <h2>animate.css</h2>
     <!-- <div :class="compclass"></div> -->
-    <div :class="[testClass,animatedClass,currentAnimate]"></div>
+    <div :class="[testClass,animatedClass,currentAnimate, isInfinite]"></div>
     <div class="animatebox" @click="changeAnimate()">
+      <div>
+        <input type="checkbox" id="changeInfinite" v-model="checked">
+        <label for="changeInfinite">重复播放动画</label>
+      </div>
       <button v-for="name in animateName">{{name}}</button>
     </div>
   </div>
@@ -24,7 +28,9 @@
         animateName: animateName,
         testClass: 'testClass',
         animatedClass: 'animated',
-        currentAnimate: ''
+        currentAnimate: '',
+        // isInfinite: 'infinite',
+        checked: true
       }
     },
     computed: {
@@ -33,6 +39,13 @@
           animated: true,
           testClass: true,
           currentAnimate: this.currentAnimate
+        }
+      },
+      isInfinite: function () {
+        if (this.checked) {
+          return 'infinite'
+        } else {
+          return ''
         }
       }
     },
@@ -46,6 +59,9 @@
         } else {
           console.log('1551')
         }
+      },
+      changeInfinite: function () {
+        console.log(this.isInfinite)
       }
     }
   }
