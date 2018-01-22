@@ -30,8 +30,7 @@
         class0: 'testclass',
         // class1: 'errorClass',
         activeColor: 'red',
-        fontSize: '28',
-
+        fontSize: '28'
       }
     },
     computed: {
@@ -42,10 +41,10 @@
         }
       },
       baseStyles: function () {
-        return { color: 'red'}
+        return {color: 'red'}
       },
       overStyle: function () {
-        return { fontSize: '28px'}
+        return {fontSize: '28px'}
       },
       class1: function () {
         return 'errorClass'

@@ -10,6 +10,7 @@ import apivue from '../components/learnvue/apivue.vue'
 import learntransition from '../components/learnanimate/transition.vue'
 import learncomponent from '../components/learnvue/learncomponent.vue'
 import learnclass from '../components/learnvue/learnclass.vue'
+import gether from '../components/dataStructureAlgorithm/gether.vue'
 
 Vue.use(Router)
 
@@ -48,6 +49,9 @@ export default new Router({
     },
     {
       path: '/learnclass', component: learnclass
+    },
+    {
+      path: '/dataStructureAlgorithm', component: gether
     }
   ]
 })
