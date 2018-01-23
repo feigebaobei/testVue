@@ -43,16 +43,16 @@
     // 集合操作
     unicon (otherSet) {
       let uniconSet = new Set()
-      // let a = this.values()// 返回本集合的数据组成的数组
-      // let b = otherSet.values()//
-      // for (let i = 0, iLen = a.length; i < iLen; i++) {
-      //   uniconSet.add(a[i])
-      // }
-      // for (let i = 0, iLen = b.length; i < iLen; i++) {
-      //   uniconSet.add(b[i])
-      // }
-      // for (let x of this) uniconSet.add(x)
-      for (let x of otherSet) uniconSet.add(x)
+      let a = this.values()// 返回本集合的数据组成的数组
+      let b = otherSet.values()//
+      for (let i = 0, iLen = a.length; i < iLen; i++) {
+        uniconSet.add(a[i])
+      }
+      for (let i = 0, iLen = b.length; i < iLen; i++) {
+        uniconSet.add(b[i])
+      }
+      // for (let x of this.items) uniconSet.add(x)
+      // for (let x of otherSet) uniconSet.add(x)
       return uniconSet
     }
     intersection (otherSet) {
