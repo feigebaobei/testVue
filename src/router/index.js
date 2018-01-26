@@ -11,6 +11,7 @@ import learntransition from '../components/learnanimate/transition.vue'
 import learncomponent from '../components/learnvue/learncomponent.vue'
 import learnclass from '../components/learnvue/learnclass.vue'
 import gether from '../components/dataStructureAlgorithm/gether.vue'
+import algorithms from '../components/dataStructureAlgorithm/algorithms.vue'
 
 Vue.use(Router)
 
@@ -52,6 +53,9 @@ export default new Router({
     },
     {
       path: '/dataStructureAlgorithm', component: gether
+    },
+    {
+      path: '/algorithms', component: algorithms
     }
   ]
 })

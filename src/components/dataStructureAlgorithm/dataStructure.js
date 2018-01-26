@@ -798,17 +798,76 @@ class Graph {
   }
   // 最短路径
   shortestPath (v, u) { // 从v到u的最短路径
-    let pathData = this.bfs()
+    let pathData = this.bfs(v)
     let pathSortestRe = new Stack()
     for (let toVertex = u; toVertex !== v; toVertex = pathData.predecessors[toVertex]) {
       pathSortestRe.push(toVertex)
     }
     pathSortestRe.push(v)
-    let pathSortest
+    let pathSortest = []
     while (!pathSortestRe.isEmpty()) {
       pathSortest.push(pathSortestRe.pop())
     }
     return pathSortest
+  }
+  dfs (v, callback) {
+    let color = this.initializeColor()
+    // this.dfsVisit(v, color, callback)
+    for (let i = 0, iLen = this.vertices.length; i < iLen; i++) {
+      if (color[this.vertices[i]] === 'white') {
+        this.dfsVisit(this.vertices[i], color, callback)
+      }
+    }
+  }
+  dfsVisit (v, color, callback) {
+    color[v] = 'grey'
+    if (callback) {
+      callback(v)
+    }
+    let neighbores = this.adjList.get(v)
+    for (let i = 0, iLen = neighbores.length; i < iLen; i++) {
+      if (color[neighbores[i]] === 'white') {
+        this.dfsVisit(neighbores[i], color, callback)
+      }
+    }
+    color[v] = 'black'
+  }
+  DFS (v, callback) {
+    console.log('DFS')
+    let color = this.initializeColor()
+    let d = []
+    let f = []
+    let p = []
+    let time = 0
+    for (let i = 0, iLen = this.vertices.length; i < iLen; i++) {
+      d[this.vertices] = 0
+      f[this.vertices] = 0
+      p[this.vertices] = null
+    }
+    for (let i = 0, iLen = this.vertices.length; i < iLen; i++) {
+      if (color[this.vertices[i]] === 'white') {
+        this.DFSVisit(this.vertices[i], color, time, d, f, p)
+      }
+    }
+    return {
+      discovery: d,
+      finished: f,
+      predecessors: p
+    }
+  }
+  DFSVisit (v, color, time, d, f, p) {
+    color[v] = 'grey'
+    d[v] = ++time
+    let neighbores = this.adjList.get(v)
+    for (let i = 0, iLen = neighbores.length; i < iLen; i++) {
+      if (color[neighbores[i]] === 'white') {
+        color[neighbores[i]] = 'grey'
+        this.DFSVisit(neighbores[i], color, time, d, f, p)
+      }
+    }
+    color[v] = 'black'
+    f[v] = ++time
+    console.log('explored ' + v)
   }
 }
 export {Stack, Queue, PriorityQueue, LinkedList, DoubleLinkedList, unionSet, insersection, containSet, diffSet, HasHTable, HashMap, BinarySearchTree, Graph}

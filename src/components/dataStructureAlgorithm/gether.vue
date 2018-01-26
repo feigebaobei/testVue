@@ -140,7 +140,8 @@ graph0.addEdge('E', 'I')
 console.log(graph0.toString())
 console.log(graph0.bfs('A', printNode))
 console.log(graph0.shortestPath('A', 'I'))
-
+graph0.dfs('A', printNode)
+graph0.DFS('A', printNode)
 // console.log(54151)
 // class Set {
 //   constructor () {

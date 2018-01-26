@@ -11,6 +11,7 @@
       <router-link to="/learncomponent">learncomponent</router-link>
       <router-link to="/learnclass">learnclass</router-link>
       <router-link to="/dataStructureAlgorithm">dataStructureAlgorithm</router-link>
+      <router-link to="/algorithms">algorithms</router-link>
     </nav>
     <div class="content">
       <router-view/>
