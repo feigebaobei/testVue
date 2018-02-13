@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>welcome from lixd.</h1>
     <img src="./assets/logo.png">
     <nav class="nav">
       <router-link to="/foo">Go to Foo</router-link>
