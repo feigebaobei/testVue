@@ -1,0 +1,38 @@
+[
+  {
+    "name": "jake",
+    "age": 23,
+    "color": "black",
+    "major": "math"
+  },
+  {
+    "name": "tank",
+    "age": 23,
+    "color": "black",
+    "major": "arm"
+  },
+  {
+    "name": "bor",
+    "age": 23,
+    "color": "pink",
+    "major": "design"
+  },
+  {
+    "name": "lee",
+    "age": 23,
+    "color": "blue",
+    "major": "water"
+  },
+  {
+    "name": "rookie",
+    "age": 23,
+    "color": "orange",
+    "major": "fruit"
+  },
+  {
+    "name": "corn",
+    "age": 23,
+    "color": "green",
+    "major": "stone"
+  }
+]
