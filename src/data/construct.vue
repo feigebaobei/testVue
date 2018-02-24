@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  default export {
+  export default {
     data() {
       return {}
     },

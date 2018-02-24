@@ -12,6 +12,7 @@ import learncomponent from '../components/learnvue/learncomponent.vue'
 import learnclass from '../components/learnvue/learnclass.vue'
 import gether from '../components/dataStructureAlgorithm/gether.vue'
 import algorithms from '../components/dataStructureAlgorithm/algorithms.vue'
+import frontEndSplit from '../components/frontEndSplit/front.vue'
 
 Vue.use(Router)
 
@@ -56,6 +57,9 @@ export default new Router({
     },
     {
       path: '/algorithms', component: algorithms
+    },
+    {
+      path: '/frontEndSplit', component: frontEndSplit
     }
   ]
 })

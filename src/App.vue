@@ -13,6 +13,7 @@
       <router-link to="/learnclass">learnclass</router-link>
       <router-link to="/dataStructureAlgorithm">dataStructureAlgorithm</router-link>
       <router-link to="/algorithms">algorithms</router-link>
+      <router-link to="/frontEndSplit">frontEndSplit</router-link>
     </nav>
     <div class="content">
       <router-view/>
