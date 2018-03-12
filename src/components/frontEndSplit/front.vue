@@ -43,7 +43,7 @@
       axiosData: function () {
         axios({
           method: 'get',
-          url: '/static/s.json',
+          url: '/static/resource.json',
           data: {
             firstName: 'fred',
             lastName: 'flintstone'
@@ -58,7 +58,7 @@
       },
       ajaxData: function () {
         this.ajaxdata = $.ajax({
-          url: 'http://localhost:8080/static/s.json',
+          url: 'http://localhost:8080/static/resource.json',
           dataType: 'JSONP'
         })
       }
@@ -69,7 +69,7 @@
       console.log('mounted')
       axios({
         method: 'get',
-        url: '/static/s.json'
+        url: '/static/resource.json'
       }).then(response => {
         this.mountedData = response.data[0]
       })

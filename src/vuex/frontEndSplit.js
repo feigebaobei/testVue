@@ -1,1 +1,0 @@
-frontEndSplit.js
