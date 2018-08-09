@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
-    "element-ui": "^2.0.11",
+    "element-ui": "^2.4.4",
     "jquery": "^3.2.1",
     "vue": "^2.5.2",
     "vue-draggable": "^1.0.0-rc.3",
@@ -30,6 +30,7 @@
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-jest": "^21.0.2",
     "babel-loader": "^7.1.1",
+    "babel-plugin-component": "^1.1.1",
     "babel-plugin-dynamic-import-node": "^1.2.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",

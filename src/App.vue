@@ -14,9 +14,11 @@
       <router-link to="/dataStructureAlgorithm">dataStructureAlgorithm</router-link>
       <router-link to="/algorithms">algorithms</router-link>
       <router-link to="/frontEndSplit">frontEndSplit</router-link>
+      <router-link to="/elementui">elementui</router-link>
+      <router-link to="/route">route</router-link>
     </nav>
     <div class="content">
-      <router-view/>
+        <router-view/>
     </div>
     <!-- <vuedraggable></vuedraggable> -->
     <!-- <hello></hello> -->
@@ -31,6 +33,10 @@
 import footer from './components/footer.vue'
 export default {
   name: 'app',
+  data () {
+    return {
+    }
+  },
   components: {
     // vuedraggable: vuedraggable,
     // hello
@@ -60,6 +66,7 @@ export default {
   border: 1px solid #386;
   padding: 5px;
   margin: 5px 8px;
+  display: inline-block;
 }
 .content {
   margin: 15px auto;
